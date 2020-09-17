@@ -1,0 +1,62 @@
+body { text-align: center;
+background-color: black;
+color: white;
+}
+
+html {
+	height: 150%;
+	width: 100%;
+	
+}
+footer{
+	 background-image: linear-gradient(45deg, green 10%, yellow 20%,red 40% ,blue 60%, silver 80%, white 90%)
+}
+
+#take2columns {
+	column-count: 2;
+	column-gap: 2%;
+	column-rule-style: solid;
+	 column-rule-width: 2%;
+	 column-rule-color: red;
+	 width: 60%;
+}
+
+#take2columns2 {
+	column-count: 2;
+	column-gap: 2%;
+	column-rule-style: solid;
+	 column-rule-width: 2%;
+	 column-rule-color: red;
+	 width: 60%;
+	 float: right;
+	 height: 50%;
+}
+script {
+	height: 50%;
+}
+
+button {
+	background-color: red;
+	color: white;
+}
+
+
+.subMenu:hover{
+	background: white;
+	color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

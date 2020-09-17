@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head><title>Justice League Member Information-JavaScript Project</title>
+<link rel="stylesheet" href='justiceleaguestyles.css'> 
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<script> 
+        document.writeln( "<h1 style='color: red'>");
+		document.write('Welcome To My Justice League ' + 'Interactive Page!</h1>');
+        var name; 
+		name = prompt("Please enter your name");
+		document.writeln("<h1>Hello " + name + ", Welcome to My Justice League JavaScript Website!</h1>");
+
+		
+function evalSlider()
+{
+  var sliderValue = document.getElementById("rating").value;
+  document.getElementById("sliderVal").innerHTML = sliderValue;
+  }
+ 
+function showSubMenu() {
+document.getElementById("expandingMenu").style.display="block";
+}
+  </script>
+
+</head>
+
+<body>
+
+<hr>
+
+<div id='take2columns'>
+
+<div class="hide" class="expandingMenu">
+<button class='button'>Navigation Menu</button>
+<ul>
+<li>
+  <a class="subMenu" href="https://www.imdb.com/title/tt0974015/">IMDB Website</a></li>
+<li>  <a class="subMenu" href="https://www.warnerbros.com/justice-league">Official JS Website</a></li>
+  
+  </ul>
+</div>
+
+<a href="URL ADDRESS"><img src="images/superman.jpg" onmouseover="this.src='images/batman.jpg'" onmouseout="this.src='images/superman.jpg'" /></a>
+
+
+
+
+ <form action = "#" method="post">
+ Rate this website (0-100): 
+ <input type="range" id="rating" onchange="evalSlider()"/>
+ <output id="sliderVal"></output>
+ </form>
+
+<h1>Who is your favourite member of the Justice League:</h1>
+<img src='images/justiceLeague.jpg' title='js' alt='js'><br><br>
+<br>
+
+</div>
+
+<div id='button'>
+<button onclick ="oddMem()">Click For Facts On These Superheroes</button>
+</div>
+
+<p id='oddMEMBERS'></p>
+<script>
+//images and text// 
+var oddmem = []
+//https://www.bing.com/images/search?view=detailV2&ccid=MCOkgqqh&id=F2117ED6B6797F6A8B394FBA572692DA5865413E&thid=OIP.MCOkgqqhYW4bNcqJhZ-gXAHaF7&mediaurl=http%3a%2f%2fwallpapercave.com%2fwp%2fmON9Zan.png&exph=1024&expw=1280&q=superman+logo&simid=608037650991811342&selectedIndex=2&cbir=sbi&ajaxhist=0//
+oddmem[0] =  "   <div id='take2columns2'>  <br><strong>Superman</strong>: <br>Description: Born on a distant planet Krypton, he was raised as Clark Kent on planet Earth after he was sent here during the destruction of Krypton.  <br><strong>Powers and Abilities: </strong> <ul><li>Strongest man on earth.</li><li> Can fly at unmatchable speeds. </li><li>Shoots heat beams from his eyes.</li><li> Shoots frost from his mouth</li> <br><br><img src='images/superman.jpg' height='200' width='200' > </div>"
+//https://www.bing.com/images/search?view=detailV2&ccid=L7apQ%2faM&id=E5B018B6A4C68017C5477E915A62F81A359A3E05&thid=OIP.L7apQ_aMoFoZX5IR6bZZJgHaEY&mediaurl=http%3a%2f%2fwww.vectortemplates.com%2fraster%2fbatman-logo-big.gif&exph=1225&expw=2072&q=batman+logo&simid=608006082962260551&selectedIndex=0&ajaxhist=0//
+oddmem[1] = "   <div id='take2columns2'>  <br><strong>Batman: </strong>Witnessed a tragic childhood after his parents were murdered in front of him. This motivates him to dedicate his life to fight crime. <br><strong>Powers and Abilities:</strong><ul><li>Goes through rigorous training to be mentally and physically agile. </li><li>No superpowers.</li><li> Highly developed detective skills.</li><li> Massive resources.</li><li> Unmatched dedication </li><br><br><img src='images/batman.jpg' height='200' width='200'> </div>"
+//https://www.bing.com/images/search?view=detailV2&ccid=KCOg1Kmg&id=C388A505F758F729C539CFDEB3D92CF6983780F4&thid=OIP.KCOg1KmgnKj7VlS6FUP9FwHaHa&mediaurl=http%3a%2f%2fpiratevinyldecals.com%2fwps%2fwp-content%2fuploads%2f2015%2f12%2fGreen-Lantern-Die-Cut-Vinyl-Decal-PV1393.png&exph=500&expw=500&q=greenlantern+logo+black+white&simid=607990311859195095&selectedIndex=1&cbir=sbi&ajaxhist=0//
+oddmem[2] = " <div id='take2columns2'>  <br><strong>Green Lantern: </strong>The power ring chooses Hal Jordan as a member of the Green Lantern Corps. after a dying alien, Abir Sur, crash-lands his ship on earth.<br><strong> Powers and Abilities:</strong><ul><li>Flight</li><li> Ability to create and control constructs through his mind </li><br><br><img src='images/gl.jpg'  height='200' width='200'> </div>"
+//https://www.google.ie/search?biw=1280&bih=603&tbm=isch&sa=1&ei=etwSXISNOreX1fAP9bS1uAI&q=aquaman+trident+orange+logo&oq=aquaman+trident+orange+logo&gs_l=img.3...1758.3002..3521...0.0..0.59.256.5......1....1..gws-wiz-img.p58es-L3wiQ#imgrc=QK69eipaY0q1xM://
+oddmem[3] =  "  <div id='take2columns2'>   <br><strong>Aquaman: </strong>The King of the Seven Seas. Reluctant ruler of Atlantis. <br><strong>Powers:</strong> <ul><li>super strength</li><li>durability</li><li> control over sea life</li><li>exceptional swimming ability</li><li>ability to breathe underwater </li><br><br><img src='images/aquaman.jpg'  height='200' width='200'> </div> "
+//https://www.bing.com/images/search?view=detailV2&ccid=Yly5b%2fiB&id=DC954E50FDA161C04A850963713BE0C23F384153&thid=OIP.Yly5b_iBB5EtTEvY3AihYAHaHa&mediaurl=http%3a%2f%2fep.yimg.com%2fay%2fstylinonline%2fwonder-woman-logo-patch-5.jpg&exph=1200&expw=1200&q=wonderwoman+logo&simid=608000589704201061&selectedIndex=26&ajaxhist=0//
+oddmem[4] = "   <div id='take2columns2'>  <br><strong>Wonder Woman: </strong>Comes from the Amazons, an all-female society that resides on the island nation of Themyscira (Paradise Island).<br><strong>Powers and Abilities:</strong> <ul><li>Super-strength. </li><li>Very high mental and physical abilities. </li><li>Resistance to fire.</li><li> Telescopic vision and super hearing.</li><li> Flight </li><br><br><img src='images/wonderwoman.jpg'  height='200' width='200'> </div>"
+//https://www.bing.com/images/search?view=detailV2&ccid=KNTAh6%2bX&id=3A6599A11E398F2DFEE7EAEF6049A7F05CCB3AC4&thid=OIP.KNTAh6-X49DgknNCGJH1twHaHa&mediaurl=https%3a%2f%2fi.pinimg.com%2foriginals%2fea%2f90%2fd5%2fea90d5dd396d0cd3168c7097b92ab641.jpg&exph=2000&expw=2000&q=cyborg+logo&simid=608050660444801349&selectedIndex=2&ajaxhist=0//
+oddmem[5] = " <div id='take2columns2'>  <br><strong>Cyborg : </strong><ul><li>Superhuman strength. </li><li>Very high intelligence.</li> <li>Excellent hand-to-hand fighter </li><br><br><img src='images/cyborg.jpg'  height='200' width='200'> </div>"
+//https://www.bing.com/images/search?view=detailV2&ccid=zc2NK0yH&id=131E0D5D1CEF394B55A475421A264CC475E3244D&thid=OIP.zc2NK0yH3065QAg-rHk8swHaHa&mediaurl=http%3a%2f%2fimages7.solidcommerce.com%2fsc7051343%2fflashlogo.png&exph=1386&expw=1386&q=flash+logo&simid=608033429038107022&selectedIndex=7&ajaxhist=0//
+oddmem[6] = " <div id='take2columns2'>  <br><strong>Flash: </strong>Barry Allen is the second incarnation of The Flash, the fastest man alive. Using his super-speed powers, he taps into the Speed Force and becomes a costumed crime-fighter. His position is a legacy in the Flash Family<br><br><img src='images/flash.png'  height='200' width='200'> </div>"
+
+
+
+function oddMem() {
+	var randomMembers = Math.floor(Math.random()*(oddmem.length));
+	document.getElementById('oddMEMBERS').innerHTML = oddmem[randomMembers];
+}
+
+</script>
+<p><img src='images/JL2.png' height='300px' width='300px'> <br><br>For more information of the developer of this web page, email Yongmei Chen at <a href='www.yongmei.chen@hotmail.com'>www.yongmei.chen@hotmail.com</a></p>
+
+
+<footer>&copy; Yongmei Chen 2018       &copy; DC Comics 2018</footer>
+
+<script>
+document.getElementById("buttonMenu").onclick = showSubMenu;
+
+</script>
+</body>
+</html>
+
